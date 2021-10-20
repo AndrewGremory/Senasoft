@@ -3,8 +3,9 @@ $alert ='';
 session_start();
 if(!empty($_SESSION['active']))
 {
-    header('location:menu.php');
+    header('location:inicio.php');
 }
+
 else{ 
     if(!empty($_POST))
     {
@@ -21,13 +22,14 @@ else{
             $miconexion=conectar_bd('', 'senasoft');
             $resultado=consulta($miconexion,"select * from usuarios where email_usuario ='$usu' and
             contra_usuario='$clav'");
-            $row= $resultado->fetch_array(MYSQL_ASSOC);
+            $row= $resultado->fetch_array(MYSQLI_ASSOC);
 
             if($resultado->num_rows>0){
                 
                 $_SESSION['active']=true;
-                $_SESSION['idusuario']=$row['dni_usuario'];
-                $_SESSION['nombreusu']=$row['nom_usuario'];
+                $_SESSION['idusuario']=$row['id_usuario'];
+                $_SESSION['nomusu']=$row['nom_usuario'];
+                $_SESSION['docusu']=$row['docu_usuario'];
                 $_SESSION['apeusu']=$row['ape_usuario'];
                 $_SESSION['email']=$row['email_usuario'];
                 $_SESSION['rol']=$row['id_rol_usu'];
@@ -86,5 +88,8 @@ else{
          
     </body>
 </html>
+
+
+
 
 
