@@ -46,10 +46,6 @@ else{
 }
 
  }
-
-
-
- 
 ?>
 
 
@@ -64,10 +60,10 @@ else{
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Page Title - SB Admin</title>
+        <title>Login |</title>
         <link href="styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-    </head>
+<!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+ -->    </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
@@ -80,22 +76,35 @@ else{
                                     <div class="card-body">
                                     <form id="formulario" method="post" action="">
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputEmailAddress">Email</label>
-
+                                                <label class="small mb-1" for="inputEmailAddress">Usuario</label>
                                                 <input class="form-control py-4" type="text" name="usuario" placeholder="ejemplo@ejemplo.com" />
                                             </div>
                                             <div class="form-group">
-                                                <label class="small mb-1" for="inputPassword">Password</label>
-                                        
+                                                <label class="small mb-1" for="inputPassword">Contraseña</label>
                                                 <input class="form-control py-4" type="password" name="clave" />
                                             </div>
                                             <div class="form-group">
                                             </div>
+                                            <input class="btn btn-primary" type="submit" value="INGRESAR" ><br><br>
+
                                             <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <div><?php echo isset($alert)? $alert:" "; ?></div>
-                                                <a class="btn btn-primary" type="submit" value="INGRESAR" >Login</a>
+                                            <div>
+                                                <?php echo isset($alert)? $alert:" "; ?>
+                                            </div>
+
 
                                             </div>
+
+
+
+
+
+
+
+
+
+
+                                            
                                         </form>
                                     </div>
                            
@@ -120,9 +129,9 @@ else{
                 </footer>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+    <!--     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+
     </body>
 </html>
 
