@@ -1,142 +1,83 @@
-cuerpo {
-    margen :  0 ;
-    familia de fuentes : Arial , Helvetica , sans-serif;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
-  . topnav {
-    desbordamiento : oculto;
-    color de fondo :  # 333 ;
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
   }
   
-  . topnav  a {
-    flotar : izquierda;
-    color :  # f2f2f2 ;
-    alineación de texto : centro;
-    relleno :  14 px  16 px ;
-    decoración de texto : ninguna;
-    tamaño de fuente :  17 px ;
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
   
-  . topnav  a : hover {
-    color de fondo :  # ddd ;
-    color : negro;
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
   }
   
-  . topnav  a . activo {
-    color de fondo :  # 008cff ;
-    color : blanco;
+  .topnav a.active {
+    background-color: #008cff;
+    color: white;
   }
 
-  . botón {
-    pantalla : bloque en línea;
-    radio del borde :  4 px ;
-    color de fondo :  # 12b141 ;
-    borde : ninguno;
-    color :  # FFFFFF ;
-    alineación de texto : centro;
-    tamaño de fuente :  13 px ;
-    relleno :  20 px ;
-  / * ancho: 11%; * /
-    transición : todos los 0,5 s ;
-    cursor : puntero;
-    margen :  5 px ;
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #12b141;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 13px;
+    padding: 20px;
+  /*   width: 11%; */
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
 }
   
-  . intervalo de botones  {
-    cursor : puntero;
-    pantalla : bloque en línea;
-    posición : relativa;
-    transición :  0,5 s ;
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
   }
   
-  . intervalo de botones  : después de {
-    contenido :  '\ 00bb' ;
-    posición : absoluta;
-    opacidad :  0 ;
-    arriba :  0 ;
-    derecha :  -20 px ;
-    transición :  0,5 s ;
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
   }
   
-  . button : hover  span {
-    padding-right :  25 px ;
+  .button:hover span {
+    padding-right: 25px;
     
   }
   
-  . button : hover  span : after {
-    opacidad :  1 ;
-    derecha :  0 ;
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
   }
 
-. contenido {
-  color de fondo :  # e7e7e7 ;
-  borde :  1 px sólido # 333 ;
-  ancho :  100 % ;
+.contenido{
+  background-color: #e7e7e7;
+  border: 1px solid #333;
+  width: 100%;
 }
 
-. contenido-b {
-/ * color de fondo: # ff8181;
-  borde: 1px sólido # 333; * /
-  ancho :  50 % ;
-  margen superior :  5 px ;
+.contenido-b{
+/*   background-color: #ff8181;
+  border: 1px solid #333; */
+  width: 50%;
+  margin-top: 5px;
 
-}
-
-
-# id01 {
-  color de fondo :  rgba ( 0 ,  0 ,  0 ,  0.342 );
-  ancho :  100 % ;
-  altura :  100 % ;
-}
-
-. modal {
-  color de fondo :  rgb ( 0  0  0  /  79 % );
-  pantalla : ninguna;
-  posición : fija;
-  índice z :  1 ;
-  izquierda :  0 ;
-  arriba :  0 ;
-  ancho :  100 % ;
-  altura :  100 % ;
-  desbordamiento : automático;
-  padding-top :  60 px ;
-}
-
-. modal-content {
-  color de fondo :  # fefefeb8 ;
-  margen :  5 % automático 15 % automático;
-  borde :  1 px sólido # 888 ;
-  ancho :  80 % ;
-
-/ * imagen de fondo: url (../ img / cyber-4610993_1920.jpg)! importante; * /
-  tamaño de fondo :  100 %  100 % ;
-  repetición de fondo : no repetición;
-}
-. modal-content2 {
-  color de fondo :  # fefefeb8 ;
-  margen :  5 % automático 15 % automático;
-  borde :  1 px sólido # 888 ;
-  ancho :  80 % ;
-  altura :  577 px ;
-/ * imagen de fondo: url (../ img / abstract-3291293_1280.jpg)! importante; * /
-  tamaño de fondo :  100 %  100 % ;
-  repetición de fondo : no repetición;
-}
-. cerrar {
-  posición : absoluta;
-  derecha :  25 px ;
-  superior :  40 px ;
-  color :  rgb ( 255  0  0 );
-  tamaño de fuente :  35 px ;
-  font-weight : negrita;
-}
-. Cerrar : libración , . close : focus {
-  color : rojo;
-  cursor : puntero;
-}
-
-. imgcontainer {
-  alineación de texto : centro;
-  margen :  24 px  0  12 px  0 ;
-  posición : relativa;
 }
