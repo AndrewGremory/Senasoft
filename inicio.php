@@ -39,30 +39,52 @@
 
     <container id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</span>
-        <div class="modal-content animate" >
+        <center><div class="modal-content animate" >
           <form id="forma" name="forma" method="POST">
             <div class="contenido">
               <br>
-              <label class="textos1" for="usuario">Tipo de documento</label>
-      
-                  <select  class="textos2" name="tipoid" required="true">
-                  <option id=""value=" " selected>Tipo de documento </option>                         
-                  <option id=""value="CC" selected>Cédula de Ciudadanía </option>                          
-                  <option id=""value="TI">Tarjeta de Identidad</option>                       
-                  <option id=""value="RC">Cédula de Extranjería</option>                         
-                  <option id="" value="PA">Pasaporte</option>                      
-              </select>
-              
-      
-      
-           
-                      <label class="textos1" for="usuario">Número de documento</label>
-                      <input class="textos2" type="text" id="usuario"  placeholder="Ingrese su usuario" name="numero-usuario" required="true"/>
-                
-                 <button type="submit" name="guardar" value="1">guardar</button>
-                 <button type="submit" name="guardar" value="2">eliminar</button>
+              <label class="textos1" for="usuario">Servicio</label><br>
+              <input class="textos2" type="text" id="usuario"  placeholder="Nombre del servicio" name="numero-usuario" required="true"/><br><br>
+                <button type="submit" name="guardar" value="1">Agregar</button>
+                <button type="submit" name="guardar" value="2">cancelar</button>
           </form>
-        </div>
+        </div></center>
     </container>
+
 </body>
+
+<?php      
+if ($_SERVER['REQUEST_METHOD']==='POST') { 
+  /* Activar alerta */
+  echo "<script src='jquery/jquery-3.3.1.min.js'></script>";
+  echo "<script src='popper/popper.min.js'></script>";	 	 	
+  echo "<script src='bootstrap4/js/bootstrap.min.js'></script>";
+  echo "<script src='plugins/sweetAlert2/sweetalert2.all.min.js'></script>";
+  echo "<script src='codigo.js'></script>"; 
+
+  $vguardar=$_POST['guardar'];
+  $miconexion=conectar_bd("", 'senasoft');
+  if($vguardar==1){
+ 
+  $tipod_usuario=$_POST['tipoid'];
+  $numero_usuario=$_POST['numero-usuario'];
+
+  $resultado=consulta($miconexion,"INSERT INTO `registro`(`tipo_id`, `numero_id`) 
+  VALUES ('$tipod_usuario','$numero_usuario')");
+
+
+}
+if($vguardar==2){
+  $numero_usuario=$_POST['numero-usuario'];
+  $resultado=consulta($miconexion,"SELECT * FROM `registro` WHERE `numero_id` like '$numero_usuario' ");
+  $fila0=$resultado->fetch_object(); 
+  $valor=$fila0->id;
+echo"--------------------------------------------------------------------------------------------".$valor;
+
+  $resultado=consulta($miconexion,"DELETE FROM `registro` WHERE id like'$valor'");
+  
+
+}
+}?>
+
 </html>

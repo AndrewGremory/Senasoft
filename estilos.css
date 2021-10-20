@@ -125,8 +125,8 @@ body {
 .close {
   position: absolute;
   right: 25px;
-  top: -13px;
-  color: rgb(0, 0, 0);
+  top: 40px;
+  color: rgb(255 0 0);
   font-size: 35px;
   font-weight: bold;
 }
@@ -139,50 +139,4 @@ body {
   text-align: center;
   margin: 24px 0 12px 0;
   position: relative;
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 500px){
-
-  .modal-content {
-      border: 1px solid #888;
-      width: 100%;
-      height: 753px;
-  }
-
-  .cont-re-ad {
-      position: relative;
-      top:0px; 
-      background-color: #ff110000;
-      margin: 0px;
-      width: 75%;
-      height: 389px;
-      border: solid #00d4ff00;
-    right: 0px; 
-  }
-  
-  .cont-re-ad2 {
-      position: relative;
-      bottom: 0px; 
-      background-color: #10ff3000;
-      margin: 0px;
-      width: 75%;
-      height: 389px;
-      border: solid #00d4ff00;
-      left: 0px; 
-  }
-
-  .navbar-fixed-top,
-.navbar-fixed-bottom {
-position: relative;
-right: 0;
-left: 0;
-z-index: 1030;
-}
 }
