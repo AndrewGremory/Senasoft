@@ -20,7 +20,7 @@ else{
             
 
             $miconexion=conectar_bd('', 'senasoft');
-            $resultado=consulta($miconexion,"select * from usuarios where email_usuario ='$usu' and
+            $resultado=consulta($miconexion,"select * from usuarios where email_usuario ='$usu' or nom_usuario ='$usu' and
             contra_usuario='$clav'");
             $row= $resultado->fetch_array(MYSQLI_ASSOC);
 
