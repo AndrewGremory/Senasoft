@@ -48,10 +48,12 @@ else{
  }
 ?>
 
+<<<<<<< HEAD
 
 
 
-
+=======
+>>>>>>> 9450e31ebbb931204e2e51db11881145d2a49d49
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -61,7 +63,7 @@ else{
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Login |</title>
-        <link href="styles.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
 <!--         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
  -->    </head>
     <body class="bg-primary">
@@ -91,20 +93,7 @@ else{
                                             <div>
                                                 <?php echo isset($alert)? $alert:" "; ?>
                                             </div>
-
-
                                             </div>
-
-
-
-
-
-
-
-
-
-
-                                            
                                         </form>
                                     </div>
                            
@@ -134,5 +123,6 @@ else{
 
     </body>
 </html>
+
 
 

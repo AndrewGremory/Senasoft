@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,37 +11,87 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/moment.min.js"></script>
 
+    <link rel="stylesheet" href="estilos.css">
+
 
  <!-- full calendar -->
     <link rel="stylesheet" href="css/fullcalendar.css">
-    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/fullcalendar.js"></script>
+    <script src="js/es.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-    <div class="header">
-        <header>
-        <h2>Nombre de servicio
-        <button>Renombrar</button>
-        <button>Eliminar</button>
-        </h2>
-        </header>
-    </div>
+    <header>
+        <br>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <h1 href="inicio.php">Servicio 
+
+                    <button type="button" class="btn btn-outline-dark">Renombrar</button>
+                    <button type="button" class="btn btn-outline-dark">Eliminar</button>
+
+                </h1>
+                
+                
+            </div>
+           
+        </nav>
+    </header>
+    <hr>
     <div class="container">
         <div class="row">
             <div class="col"></div>
             <div class="col-7"> <div id="CalendarioWeb"></div> </div>
             <div class="col"></div>
         </div>
-        <h3 style="text-align: center">Mes / Año</h3>
     </div>
 
 
 <script>
     $(document).ready(function(){
         $('#CalendarioWeb').fullCalendar();
-    });
+    }),
+    businessHours:[ // specify an array instead
+  {
+    daysOfWeek: [ 1, 2, 3 ], // Monday, Tuesday, Wednesday
+    startTime: '08:00', // 8am
+    endTime: '18:00' // 6pm
+  },
+  {
+    daysOfWeek: [ 4, 5 ], // Thursday, Friday
+    startTime: '10:00', // 10am
+    endTime: '16:00' // 4pm
+  }
+]
+        
+    ;
 
 </script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>  
 
 
     
