@@ -2,6 +2,7 @@
    include('funcion.php');
    $miconexion=conectar_bd('', 'senasoft'); 
    $resultado=consulta($miconexion, "select * from especialidad");
+   
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,24 +21,15 @@
      <div class="w3-container w3-blue ">
        <h2>Registro del Personal</h2>
      </div>
- 
- 
-                         
-      
        <form  method="post"  action="guardar_personal.php" class="w3-container"> 
-   
        <p>        
-        
-       <br>
-       
-          
+       <br> 
        <br>
        <div class="w3-col ">
          <label class="label">Nombre y Apellido </label>
          <input class="w3-input w3-border"  style="text-transform: uppercase;" type="text" name="nombre" id="nombre" value="" placeholder="Nombres" required/>
        </div>
        <div class="w3-col m8 l6 ">
-       
          <label class="label">Documento</label>
          <input class="w3-input w3-border"  type="number" name="numdni" id="numdni" min="9999" max="9999999999999" value="" placeholder="Numero de identificación" required/> 
        </div>
@@ -81,12 +73,17 @@
  <a  href="propietarios.php" class="w3-button w3-blue" style="width:100% "> Cancelar</a>
  </div>
  <div class="w3-half">
- <button class="w3-bar-item w3-button w3-blue" style="width:100%">Registrar</button>
+ <button class="w3-bar-item w3-button w3-blue" style="width:100%" type="submit" name="guardar" value="1">Registrar</button>
+
  </div>
 </div>
 
        <br>
          
      </form>
+
+
+   
+
 </body>
 </html>
