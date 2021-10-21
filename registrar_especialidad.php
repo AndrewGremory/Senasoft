@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/styles.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>Registro de Servicios</title>
+  <title>Registro de Especialidad</title>
 </head>
 <body>
   
@@ -16,14 +16,14 @@
     
    <div class="w3-card-4">
      <div id="div2" class="container">
-       <h2>Registro de Servicios</h2>
+       <h2>Registro de Especialidad</h2>
 
      </div>                   
-        <form  method="post"  action="guardar_servicio.php" class="container"> 
+        <form  method="post"  action="guardar_especialidad.php" class="container"> 
    
 
        <div class="w3-col ">
-         <label class="label">Nombre del servicio </label>
+         <label class="label">Nombre de Especialidad </label>
          <input class="form-control"  style="text-transform: uppercase;" type="text" name="nombre" id="nombre" value="" placeholder="Nombres" required/>
        </div>
        

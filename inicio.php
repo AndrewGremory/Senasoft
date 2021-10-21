@@ -26,6 +26,11 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="cerrar_sesion.php">Cerrar Sesión</a>
+                <a class="dropdown-item" href="registrar_personal.php">Registro Personal</a>
+                <a class="dropdown-item" href="registrar_titurnos.php">Registro Tipo Turno</a>
+                <a class="dropdown-item" href="registrar_rol.php">Registro Usuario</a>
+                <a class="dropdown-item" href="Registrar_especialidad.php">Registro Especialidad</a>
+                <a class="dropdown-item" href="Registrar_rol.php">Registro Rol</a>
               </div>
             </li>
           </ul>
