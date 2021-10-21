@@ -1,4 +1,3 @@
-DROP DATABASE senasoft;
 CREATE DATABASE senasoft;
 USE senasoft;
 
@@ -18,7 +17,16 @@ CREATE TABLE usuarios(
     CONSTRAINT fk_rol_usu FOREIGN KEY (id_rol_usu) REFERENCES rol (id_rol),
     CONSTRAINT pk_usuarios PRIMARY KEY (id_usuario)
    );
+CREATE TABLE paciente(	
+    id_paciente INT  AUTO_INCREMENT,
+    nom_paciente VARCHAR(30) NOT NULL,
+    docu_paciente INT UNIQUE NOT NULL,
+    email_paciente VARCHAR (30) NOT NULL,
+    tfl_usuario VARCHAR (15),
+    edad_paciente VARCHAR (10) NOT NULL,
 
+    CONSTRAINT pk_usuarios PRIMARY KEY (id_paciente)
+   );
 CREATE TABLE servicios( 
     id_servicio INT AUTO_INCREMENT,
     nom_servicio VARCHAR  (20) UNIQUE,
