@@ -1,3 +1,8 @@
+<?php 
+  include('funcion.php'); 
+  $miconexion=conectar_bd('', 'senasoft'); 
+  $resultado=consulta($miconexion,"select * from especialidad"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,24 +42,21 @@
         </div>
       </nav>
 
-    <div style="padding-left:16px">
-    <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button><hr>
+    <div style="padding-left:16px  ">
+    <a class="button" style="vertical-align:middle" href="registrar_especialidad.php"><span>Registrar Especialidad </span></a><hr>
+   
     <div class="contenido">
+      
         <center><div class="contenido-b">
-        <button class="button" style="vertical-align:middle"><span>Radioterapia </span></button>
-        <button class="button" style="vertical-align:middle"><span>Reumatología </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
-        <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button>
+        <?php while ($row = $resultado->fetch_array(MYSQLI_ASSOC))
+              { 
+              
+                ?>
 
+        <button class="button" style="vertical-align:middle"><span><?php echo $row['nom_especialidad']; ?> </span></button>
+        
 
+        <?php } ?>
 
                 
 
