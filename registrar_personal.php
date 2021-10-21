@@ -22,18 +22,11 @@
    <div class="w3-card-4">
      <div class="container blue ">
        <h2>Registro del Personal</h2>
-<<<<<<< HEAD
+
      </div>                   
         <form  method="post"  action="guardar_personal.php" class="w3-container"> 
    
-      
-=======
-     </div>
-       <form  method="post"  action="guardar_personal.php" class="w3-container"> 
-       <p>        
-       <br> 
-       <br>
->>>>>>> 5e7c81b62156832bad94fe13b0f113f5f317c136
+
        <div class="w3-col ">
          <label class="label">Nombre y Apellido </label>
          <input class="form-control"  style="text-transform: uppercase;" type="text" name="nombre" id="nombre" value="" placeholder="Nombres" required/>
@@ -77,20 +70,11 @@
 <br>
 <br>
 <br>
-<<<<<<< HEAD
+
 <div class="d-grid gap-2 d-md-block">
 <a class="btn btn-primary btn-lg" href="guardar_personal.php" role="button">Registrar</a>
 <a class="btn btn-primary btn-lg" href="#" role="button">Cancelar</a>
-=======
-       <div class="w3-row-padding">
- <div class="w3-half"> 
- <a  href="propietarios.php" class="w3-button w3-blue" style="width:100% "> Cancelar</a>
- </div>
- <div class="w3-half">
- <button class="w3-bar-item w3-button w3-blue" style="width:100%" type="submit" name="guardar" value="1">Registrar</button>
 
- </div>
->>>>>>> 5e7c81b62156832bad94fe13b0f113f5f317c136
 </div>
 
        <br>
