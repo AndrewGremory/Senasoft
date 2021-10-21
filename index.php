@@ -48,7 +48,10 @@ else{
  }
 ?>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e7c81b62156832bad94fe13b0f113f5f317c136
 <!DOCTYPE html>
 <html lang="en">
     <head>
