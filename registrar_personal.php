@@ -68,8 +68,7 @@
         </div>
       
 <br>
-<br>
-<br>
+
 
 <div class="d-grid gap-2 d-md-block">
 <a class="btn btn-primary btn-lg" href="guardar_personal.php" role="button">Registrar</a>
