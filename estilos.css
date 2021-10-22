@@ -2,6 +2,24 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
+  /*ESTILO DEL FORMULARIO*/
+#div1
+{
+margin-top: 40px;
+margin-bottom: 40px;
+width: 40%;
+padding: 0;	
+border-style: solid; border-width: thin; border:0px solid; background-color:rgb(211, 221, 228);
+}
+
+#div2
+{
+  text-align: center;
+padding-top: 10px;  
+padding-bottom: 10px;
+background-color:rgb(139, 190, 226);
+}
+/* FIN ESTILO DEL FORMULARIO*/
   
   .topnav {
     overflow: hidden;
@@ -83,5 +101,4 @@ body {
 }
 
 
-/*estilo del navegador ************************************/
 
