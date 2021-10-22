@@ -1,3 +1,4 @@
+DROP DATABASE senasoft;
 CREATE DATABASE senasoft;
 USE senasoft;
 
@@ -17,16 +18,7 @@ CREATE TABLE usuarios(
     CONSTRAINT fk_rol_usu FOREIGN KEY (id_rol_usu) REFERENCES rol (id_rol),
     CONSTRAINT pk_usuarios PRIMARY KEY (id_usuario)
    );
-CREATE TABLE paciente(	
-    id_paciente INT  AUTO_INCREMENT,
-    nom_paciente VARCHAR(30) NOT NULL,
-    docu_paciente INT UNIQUE NOT NULL,
-    email_paciente VARCHAR (30) NOT NULL,
-    tfl_usuario VARCHAR (15),
-    edad_paciente VARCHAR (10) NOT NULL,
 
-    CONSTRAINT pk_usuarios PRIMARY KEY (id_paciente)
-   );
 CREATE TABLE servicios( 
     id_servicio INT AUTO_INCREMENT,
     nom_servicio VARCHAR  (20) UNIQUE,
@@ -63,11 +55,15 @@ CREATE TABLE turnos(
     id_turno INT  AUTO_INCREMENT,
     fecha_turno DATE NOT NULL,
     id_usu_turno INT,
-    id_pers_turno INT,
+    id_especialidad_turno INT,
     id_titurno_turno INT,
+    fecha_inicio_turno DATE,
+    fecha_fin_turno DATE,
+    id_servicio INT,
     CONSTRAINT fk_usuario_turno FOREIGN KEY (id_usu_turno) REFERENCES usuarios (id_usuario),
-    CONSTRAINT fk_personal_turno FOREIGN KEY (id_pers_turno) REFERENCES personal (id_personal),
+    CONSTRAINT fk_especialidad_turno FOREIGN KEY (id_especialidad_turno) REFERENCES especialidad (id_especialidad),
     CONSTRAINT fk_titurno_turno FOREIGN KEY (id_titurno_turno) REFERENCES tipo_turno (id_titurno),
+    CONSTRAINT fk_servicios FOREIGN KEY (id_servicio) REFERENCES servicios (id_servicio),
     CONSTRAINT pk_turno PRIMARY KEY (id_turno)
    );
 
