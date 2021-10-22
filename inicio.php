@@ -13,24 +13,19 @@
 </head>
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               nombre del usuario
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="cerrar_sesion.php">Cerrar Sesión</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<div class="pos-f-t ">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4 ">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark justify-content-end" >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+  </nav>
+</div>
 
     <div style="padding-left:16px">
     <button class="button" style="vertical-align:middle"><span>Agregar Servicio </span></button><hr>
